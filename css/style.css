@@ -1,0 +1,37 @@
+/* Custom CSS */
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+/* Footer Links */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust the padding for the container on mobile */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@keyframes scrolling {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    display: inline-block; /* This allows for scrolling animation */
+    animation: scrolling 10s linear infinite;
+}
+

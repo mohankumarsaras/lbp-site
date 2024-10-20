@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Post Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto flex items-center justify-between py-4">
+            <div class="text-2xl font-bold text-blue-600">
+                <img src="images/logo.png" alt="NewsNow Logo" class="h-8 inline">
+                கீழ்பவானி பாசன பாதுகாப்பு இயக்கம்
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="text-gray-700 hover:text-blue-600">முகப்பு</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-600">தொடர்புக்கு</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Scrollable Hero Section -->
+    <section class="bg-blue-500 text-white py-20 max-h-96 overflow-auto">
+        <div class="container mx-auto px-4">
+            <h1 id="hero-title" class="text-4xl font-bold whitespace-nowrap overflow-hidden">
+                <span class="scrolling-text" id="scrolling-title"></span>
+            </h1>
+            <p id="hero-description" class="mt-4 text-lg whitespace-nowrap">
+                <!-- Dynamically loaded -->
+            </p>
+            <a id="hero-link" href="#" class="mt-6 inline-block px-6 py-3 bg-white text-blue-500 font-bold rounded">Read More</a>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="container mx-auto px-4 py-10">
+        <!-- Latest News Section -->
+        <h3 class="text-2xl font-semibold mb-4">விரைவு செய்திகள்</h3>
+        <div id="latest-news-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Example Latest News Card -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-all transform hover:-translate-y-2 hover:shadow-2xl">
+                <img src="images/news-img/latest-news-img/latest_news1.jpg" alt="Latest News Image 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">கீழ்பவானி பாசன சபைகளுக்கு தேர்தல் நடத்த வேண்டும்</h3>
+                    <p class="text-gray-600 mt-2">A brief caption providing more info about the news...</p>
+                    <a href="article.html?file=latest/article1.txt" class="mt-4 inline-block text-blue-500 font-bold">Read More</a>
+                </div>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-all transform hover:-translate-y-2 hover:shadow-2xl">
+                <img src="images/news-img/latest-news-img/latest_news2.jpg" alt="Latest News Image 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">எண்ணெய் விலைகளில் குறைவு</h3>
+                    <p class="text-gray-600 mt-2">Recent developments on oil prices and market impacts...</p>
+                    <a href="article.html?file=latest/article2.txt" class="mt-4 inline-block text-blue-500 font-bold">Read More</a>
+                </div>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-all transform hover:-translate-y-2 hover:shadow-2xl">
+                <img src="images/news-img/latest-news-img/latest_news3.jpg" alt="Latest News Image 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">கால்வாய் பணி தொடர்பான செய்தி</h3>
+                    <p class="text-gray-600 mt-2">Details on the recent drainage projects in the region...</p>
+                    <a href="article.html?file=latest/article3.txt" class="mt-4 inline-block text-blue-500 font-bold">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Old News Section -->
+        <h3 class="text-2xl font-semibold mt-10 mb-4">அண்மை செய்தி</h3>
+        <div id="old-news-container" class="space-y-4">
+            <!-- Old News content will be dynamically loaded here -->
+            <div class="flex items-center space-x-4">
+                <img src="images/news-img/old-news-img/old_news1.jpg" alt="Old News Image 1" class="w-16 h-16 object-cover">
+                <div>
+                    <h4 class="font-semibold">ஈரோடு மாவட்டம் பவானிசாகர் அணையில் இருந்து, கீழ்பவானி வாய்க்காலில், அட்டவணைப்படி ஆக.,15ல் தண்ணீர் திறக்கப்-பட வேண்டும். இதன் மூலம், ஈரோடு, திருப்பூர், கரூர் மாவட்-டங்களில், 1.03 லட்சம் ஏக்கர் நிலங்கள் பாசனம் பெறும்</h4>
+                    <p>A brief description of the old news content...</p>
+                    <a href="article.html?file=old/old_article1.txt" class="text-blue-500">Read More</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <img src="images/news-img/old-news-img/old_news2.jpg" alt="Old News Image 2" class="w-16 h-16 object-cover">
+                <div>
+                    <h4 class="font-semibold">சென்னை: கீழ்பவானி கால்வாய் மூலம் ஈரோடு, திருப்பூர் மற்றும் கரூர் மாவட்டத்தைச் சேர்ந்த 2.07 லட்சம் ஏக்கர் நிலங்கள் பாசன வசதி பெறுகின்றன. இந்த கால்வாய் 60 ஆண்டுகளுக்கு முன்பு மண்ணால் அமைக்கப்பட்டது. தற்போது கால்வாய் கரைகள் பழுதடைந்து நீர்க்கசிவு அதிகரித்துள்ளது.</h4>
+                    <p>A brief description of the old news content...</p>
+                    <a href="article.html?file=old/old_article2.txt" class="text-blue-500">Read More</a>
+                </div>
+            </div>
+            <!-- Additional old news items... -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between">
+                <div>
+                    <h2 class="font-bold text-lg">கீழ்பவானி பாசன பாதுகாப்பு இயக்கம்</h2>
+                    <p>ஒருங்கிணைந்த ஈரோடு, திருப்பூர், கரூர் மாவட்டம்</p>
+                </div>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-white">Powered by Tamil Stocks</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Dynamic News Loading -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto flex items-center justify-between py-4">
+            <div class="text-2xl font-bold text-blue-600">
+                <img src="images/logo.png" alt="NewsNow Logo" class="h-8 inline">
+                கீழ்பவானி பாசன பாதுகாப்பு இயக்கம்
+            </div>
+        </nav>
+    </header>
+
+    <section class="container mx-auto px-4 py-10">
+        <h1 id="article-title" class="text-3xl font-bold mb-4"></h1>
+        <div id="article-content" class="text-gray-700"></div>
+        <a href="index.html" class="mt-6 inline-block px-6 py-2 bg-blue-500 text-white rounded">Back to Home</a>
+    </section>
+
+    <script>
+        // Function to load the article content based on the file name from the URL
+        async function loadArticle() {
+            const params = new URLSearchParams(window.location.search);
+            const fileName = params.get('file'); // Get the filename from the URL
+
+            if (fileName) {
+                const response = await fetch(`news/${fileName}`); // Change this path as needed
+                const content = await response.text();
+                
+                document.getElementById('article-title').innerText = content.split('\n')[0]; // First line as title
+                document.getElementById('article-content').innerText = content.split('\n').slice(1).join('\n'); // Remaining lines as content
+            }
+        }
+
+        // Load article content on page load
+        window.onload = loadArticle;
+    </script>
+</body>
+</html>
